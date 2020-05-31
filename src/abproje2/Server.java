@@ -178,20 +178,6 @@ public class Server extends javax.swing.JFrame {
         }).start();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void listMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listMouseClicked
-        if (evt.getClickCount() == 2) {
-            if (!list.isSelectionEmpty()) {
-                if (SwingUtilities.isLeftMouseButton(evt)) {
-                    open();
-                } else if (SwingUtilities.isRightMouseButton(evt)) {
-                    save();
-                }
-
-            }
-        }
-        // TODO add your handling code here:
-    }//GEN-LAST:event_listMouseClicked
-
     private void open() {
         Data data = (Data) mod.getElementAt(list.getSelectedIndex());
         if (data.getStatus().equals("Image")) {
@@ -216,20 +202,6 @@ public class Server extends javax.swing.JFrame {
             }
         }
     }
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        if (!list.isSelectionEmpty()) {
-            save();
-        }
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if (!list.isSelectionEmpty()) {
-            open();
-        }
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void gonderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gonderActionPerformed
         // TODO add your handling code here:
                 //Gönder butonuna basılınca yapılacak işlemler
@@ -245,6 +217,34 @@ public class Server extends javax.swing.JFrame {
         
             
     }//GEN-LAST:event_gonderActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if (!list.isSelectionEmpty()) {
+            save();
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if (!list.isSelectionEmpty()) {
+            open();
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void listMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listMouseClicked
+        if (evt.getClickCount() == 2) {
+            if (!list.isSelectionEmpty()) {
+                if (SwingUtilities.isLeftMouseButton(evt)) {
+                    open();
+                } else if (SwingUtilities.isRightMouseButton(evt)) {
+                    save();
+                }
+
+            }
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_listMouseClicked
 
     /**
      * @param args the command line arguments

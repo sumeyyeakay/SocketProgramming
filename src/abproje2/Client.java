@@ -165,6 +165,22 @@ public class Client extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void gonderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gonderActionPerformed
+        // TODO add your handling code here:
+        //Client göndere bastığı zaman yapılacak işlemler;
+        try {
+            String mesajOut = "";
+            mesajOut = mesaj.getText().trim();
+            dataOutputStream.writeUTF(mesajOut);
+        } catch (Exception e) {
+        }
+       
+    }//GEN-LAST:event_gonderActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         try {
             JFileChooser ch = new JFileChooser();
@@ -187,22 +203,6 @@ public class Client extends javax.swing.JFrame {
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void gonderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gonderActionPerformed
-        // TODO add your handling code here:
-        //Client göndere bastığı zaman yapılacak işlemler;
-        try {
-            String mesajOut = "";
-            mesajOut = mesaj.getText().trim();
-            dataOutputStream.writeUTF(mesajOut);
-        } catch (Exception e) {
-        }
-       
-    }//GEN-LAST:event_gonderActionPerformed
 
     /**
      * @param args the command line arguments
